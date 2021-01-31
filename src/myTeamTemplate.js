@@ -15,7 +15,7 @@ const render = team => {
                             ${manager.getEmail()}
                             </a>
                     </li>
-                    <li class="body-details-item">Employee office number: ${manager.getOfficeNumber()}</li>
+                    <li class="body-details-item">Mananger's office number: ${manager.getOfficeNumber()}</li>
                 </ul>
             </div>
         </div>
