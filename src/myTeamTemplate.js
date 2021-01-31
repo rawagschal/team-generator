@@ -1,0 +1,78 @@
+const renderTeam = team => {
+    const renderManager = manager => {
+        return `
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">${manager.getName()}</h2>
+                <h3 class="card-subtitle>${manager.getRole()}</h3>
+            </div>
+            <div class="card-body">
+                <ul class="body-details">
+                    <li class="body-details-item">Employee ID: ${manager.getId()}</li>
+                    <li class="body-details-item">
+                        <a href="mailto:${manager.getEmail()}>
+                        Employee email: ${manager.getEmail()}
+                        </a>
+                    </li>
+                    <li class="body-details-item">Employee office number: ${manager.getOfficeNumber()}</li>
+                </ul>
+            </div>
+        </div>
+        `;
+    };
+
+    const renderEngineer = engineer => {
+        return `
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">${engineer.getName()}</h2>
+                <h3 class="card-subtitle>${engineer.getRole()}</h3>
+            </div>
+            <div class="card-body">
+                <ul class="body-details">
+                    <li class="body-details-item">Employee ID: ${engineer.getId()}</li>
+                    <li class="body-details-item">
+                        Employee email: 
+                            <a href="mailto:${engineer.getEmail()}">
+                                ${engineer.getEmail()}
+                            </a>
+                    </li>
+                    <li class="body-details-item">
+                        Visit this engineer's GitHub profile: 
+                            <a href="${engineer.getGithub()}">
+                                ${engineer.getGithub()}
+                            </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        `;
+    };
+
+    const renderIntern = intern => {
+        return `
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">${intern.getName()}</h2>
+                <h3 class="card-subtitle>${intern.getRole()}</h3>
+            </div>
+            <div class="card-body">
+                <ul class="body-details">
+                    <li class="body-details-item">Employee ID: ${intern.getId()}</li>
+                    <li class="body-details-item">
+                        Employee email: 
+                            <a href="mailto:${intern.getEmail()}">
+                                ${intern.getEmail()}
+                            </a>
+                    </li>
+                    <li class="body-details-item">
+                        School: ${intern.getSchool()}       
+                    </li>
+                </ul>
+            </div>
+        </div>
+        `;
+    };
+
+    //
+}
