@@ -8,8 +8,8 @@ const path = require("path");
 const fs = require("fs");
 
 // put the output file in dist/
-const output = path.join("./dist/", "myTeam.html");
-const render = require("./src/myTeamTemplate");
+const output = path.join("./dist", "myTeam.html");
+const render = require("./src/myTeamTemplate.js");
 
 // to hold team members
 var teamMembers = [];
@@ -228,7 +228,7 @@ function addIntern() {
 }
 
 function finishTeam() {
-    fs.writeFile(output, render(teamMembers), "utf-8")
+    fs.writeFileSync(output, render(teamMembers));
 }
 
 createManager();

@@ -1,18 +1,19 @@
-const renderTeam = team => {
+const render = team => {
     const renderManager = manager => {
         return `
         <div class="card">
             <div class="card-header">
                 <h2 class="card-title">${manager.getName()}</h2>
-                <h3 class="card-subtitle>${manager.getRole()}</h3>
+                <h3 class="card-subtitle">${manager.getRole()}</h3>
             </div>
             <div class="card-body">
                 <ul class="body-details">
                     <li class="body-details-item">Employee ID: ${manager.getId()}</li>
                     <li class="body-details-item">
-                        <a href="mailto:${manager.getEmail()}>
-                        Employee email: ${manager.getEmail()}
-                        </a>
+                        Employee email: 
+                            <a href="mailto:${manager.getEmail()}">
+                            ${manager.getEmail()}
+                            </a>
                     </li>
                     <li class="body-details-item">Employee office number: ${manager.getOfficeNumber()}</li>
                 </ul>
@@ -26,7 +27,7 @@ const renderTeam = team => {
         <div class="card">
             <div class="card-header">
                 <h2 class="card-title">${engineer.getName()}</h2>
-                <h3 class="card-subtitle>${engineer.getRole()}</h3>
+                <h3 class="card-subtitle">${engineer.getRole()}</h3>
             </div>
             <div class="card-body">
                 <ul class="body-details">
@@ -54,7 +55,7 @@ const renderTeam = team => {
         <div class="card">
             <div class="card-header">
                 <h2 class="card-title">${intern.getName()}</h2>
-                <h3 class="card-subtitle>${intern.getRole()}</h3>
+                <h3 class="card-subtitle">${intern.getRole()}</h3>
             </div>
             <div class="card-body">
                 <ul class="body-details">
@@ -74,5 +75,28 @@ const renderTeam = team => {
         `;
     };
 
-    //
+    const html = [];
+
+    // push employees for each role into html
+    html.push(team
+        .filter(employee => employee.getRole() === "Manager")
+        .map(manager => renderManager(manager))  
+    );
+    html.push(team
+        .filter(employee => employee.getRole() === "Engineer")
+        .map(engineer => renderEngineer(engineer)).join("")
+    );
+    html.push(team
+        .filter(employee => employee.getRole() === "Intern")
+        .map(intern => renderIntern(intern)).join("")
+    );
+
+    return html.join("");
+
 }
+
+module.exports = team => {
+    return `
+    ${render(team)}
+    `
+};
