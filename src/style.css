@@ -1,0 +1,11 @@
+h1 {
+    text-align: center;
+}
+
+.card {
+    margin: 1rem;
+}
+
+.card-subtitle {
+    color: #808080;
+}
