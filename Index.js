@@ -227,6 +227,7 @@ function addIntern() {
 }
 
 function finishTeam() {
+    console.log("Thanks for building your team with Team Generator! Check the dist/ directory in your repo for your personalized myTeam.html file.")
     fs.writeFileSync(output, render(teamMembers));
 }
 
