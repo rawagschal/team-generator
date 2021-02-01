@@ -1,7 +1,7 @@
 # Team Profile Generator
 
 ## Description 
-This is a Node.js command-line application that generates an HTML webpage displaying information about a team of employees, including access to their GitHub profiles and email addresses. Click [here]() for a walkthrough of the application.
+This is a Node.js command-line application that generates an HTML webpage displaying information about a team of employees, including access to their GitHub profiles and email addresses. Click [here](https://youtu.be/DXxBItQgscE) for a walkthrough of the application.
 
 ## License
 [MIT](https://opensource.org/licenses/MIT)
