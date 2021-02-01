@@ -9,13 +9,15 @@ This is a Node.js command-line application that generates an HTML webpage displa
 ## Installation and Usage
 
 ### Installation 
-1. Install Node.js, the Inquirer npm package and Jest testing framework. 
-2. Either fork or download the source code. 
+1. Download a zip file or clone the repository 
+2. Install node.js 
+2. Run `npm i inquirer jest` to install necessary packages
 
 ### Usage
 3. Open the folder in a code editor.
-4. Call the application from the terminal using `node index.js`.
+4. Call the application from the terminal using `node index`.
 5. Follow the question prompts to create a custom HTML webpage for your team.
+6. When you choose the option to "finish building my team," check the dist/ directory for your custom myTeam.html file.
 
 ## Credits
 Made with luv by [Rachel Wagschal](mailto:rawagschal@gmail.com) <br>
